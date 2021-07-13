@@ -14,7 +14,7 @@ export function Data() {
       console.log(res.data.content)
     })
     .catch(err =>{
-      console.log(err)
+      console.log(err) 
     })
   },[])
 
