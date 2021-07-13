@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React,{useState, useEffect}  from 'react';
+import eye from '../imgs/Path 11162.svg'
+
 
 //http://movie-challenge-api-xpand.azurewebsites.net
 export function Data() {
@@ -20,7 +22,7 @@ export function Data() {
     <div className="data">
       <table>
           <thead>
-            <tr>
+            <tr id="titles">
               <th>Ranking</th>
               <th>Title</th>
               <th>Year</th>
@@ -28,11 +30,12 @@ export function Data() {
             </tr>
             {
               movies.map(movie => 
-                <tr key={movie.id}>
+                <tr id="content" key={movie.id}>
                   <th >{movie.rank}</th>
                   <th >{movie.title}</th>
                   <th >{movie.year}</th>
                   <th >{movie.revenue}</th>
+                  <th><img alt="img" src={eye}/> </th>
               </tr>
               )
             }
